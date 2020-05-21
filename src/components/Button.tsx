@@ -9,7 +9,7 @@ import {
   TouchableOpacityProps,
   ViewStyle,
 } from 'react-native';
-import { Colors } from '../constants';
+import Colors from '../utils/colors';
 
 interface ButtonProps {
   onPress: TouchableOpacityProps['onPress'];
