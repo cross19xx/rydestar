@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component test: Button Renders different styles between primary and secondary 1`] = `
+exports[`Component test: Button renders activity indicator when provided 1`] = `
+"Snapshot Diff:
+- <Button isLoading={true} onPress={[MockFunction]} title=\\"Random title\\" type=\\"primary\\" />
++ <Button onPress={[MockFunction]} title=\\"Random title\\" type=\\"primary\\" />
+
+@@ -16,13 +16,21 @@
+        \\"paddingVertical\\": 18,
+        \\"width\\": \\"100%\\",
+      }
+    }
+  >
+-   <ActivityIndicator
+-     accessibilityHint=\\"Loader\\"
+-     animating={true}
+-     color=\\"#FFFFFF\\"
+-     hidesWhenStopped={true}
+-     size=\\"small\\"
+-   />
++   <Text
++     style={
++       Array [
++         Object {
++           \\"fontSize\\": 16,
++           \\"textAlign\\": \\"center\\",
++         },
++         Object {
++           \\"color\\": \\"#FFFFFF\\",
++         },
++       ]
++     }
++   >
++     Random title
++   </Text>
+  </View>"
+`;
+
+exports[`Component test: Button renders different styles between primary and secondary 1`] = `
 "Snapshot Diff:
 - <Button onPress={[MockFunction]} title=\\"Random title\\" type=\\"primary\\" />
 + <Button onPress={[MockFunction]} title=\\"Random title\\" type=\\"secondary\\" />

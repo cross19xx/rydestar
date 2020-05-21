@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+  ActivityIndicator,
+  GestureResponderEvent,
   StyleProp,
   StyleSheet,
   Text,
@@ -12,6 +14,7 @@ import { Colors } from '../constants';
 interface ButtonProps {
   onPress: TouchableOpacityProps['onPress'];
   title: string;
+  isLoading?: boolean;
   type: 'primary' | 'secondary';
   style?: StyleProp<ViewStyle>;
 }
@@ -23,12 +26,24 @@ export default function Button(props: ButtonProps) {
 
   const textStyle = props.type === 'primary' ? styles.textPrimary : styles.textSecondary;
 
+  const activityIndicatorColor = props.type === 'primary' ? Colors.WHITE : Colors.TEXT_PRIMARY;
+
+  const handlePress = (event: GestureResponderEvent) => {
+    if (!props.isLoading && props.onPress) {
+      props.onPress(event);
+    }
+  };
+
   return (
     <TouchableOpacity
       activeOpacity={0.75}
-      onPress={props.onPress}
+      onPress={handlePress}
       style={[styles.button, ...buttonStyle]}>
-      <Text style={[styles.text, textStyle]}>{props.title}</Text>
+      {props.isLoading && (
+        <ActivityIndicator color={activityIndicatorColor} accessibilityHint="Loader" />
+      )}
+
+      {!props.isLoading && <Text style={[styles.text, textStyle]}>{props.title}</Text>}
     </TouchableOpacity>
   );
 }
