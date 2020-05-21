@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.4.2",
+    "@react-navigation/stack": "^5.3.9",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.6.1",
@@ -28,6 +29,7 @@
     "prettier": "^2.0.4",
     "react-native-testing-library": "^2.0.0-rc.1",
     "react-test-renderer": "16.11.0",
+    "snapshot-diff": "^0.8.0",
     "typescript": "^3.8.3"
   },
   "scripts": {

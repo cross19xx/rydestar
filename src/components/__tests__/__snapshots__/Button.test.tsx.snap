@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component test: Button Renders different styles between primary and secondary 1`] = `
+"Snapshot Diff:
+- <Button onPress={[MockFunction]} title=\\"Random title\\" type=\\"primary\\" />
++ <Button onPress={[MockFunction]} title=\\"Random title\\" type=\\"secondary\\" />
+
+@@ -8,11 +8,11 @@
+    onResponderTerminate={[Function onResponderTerminate]}
+    onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+    onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+    style={
+      Object {
+-       \\"backgroundColor\\": \\"#F44336\\",
++       \\"backgroundColor\\": \\"#CCCCCC\\",
+        \\"borderRadius\\": 8,
+        \\"opacity\\": 1,
+        \\"paddingVertical\\": 18,
+        \\"width\\": \\"100%\\",
+      }
+@@ -24,11 +24,11 @@
+          Object {
+            \\"fontSize\\": 16,
+            \\"textAlign\\": \\"center\\",
+          },
+          Object {
+-           \\"color\\": \\"#FFFFFF\\",
++           \\"color\\": \\"#212121\\",
+          },
+        ]
+      }
+    >
+      Random title"
+`;
